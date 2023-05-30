@@ -36,17 +36,18 @@ export function UpgradeTip({
     <>
       <div className="relative flex min-h-[295px] w-full items-center justify-between overflow-hidden rounded-lg pb-10">
         <picture className="absolute min-h-[295px] w-full rounded-lg object-cover">
-          <source srcSet={`${background}-dark.jpg`} media="(prefers-color-scheme: dark)" />
+          <source srcSet={`${background}-white.jpg`} media="(prefers-color-scheme:dark)" />
           <img
             className="absolute min-h-[295px] w-full rounded-lg object-cover"
-            src={`${background}.jpg`}
+            src={`${background}-white.jpg`}
             loading="lazy"
-            alt={title}
+            
+            
           />
         </picture>
         <div className="relative mt-4 px-8 sm:px-14">
           <h1 className={classNames("font-cal text-3xl", dark && "text-inverted")}>{t(title)}</h1>
-          <p className={classNames("mt-4 mb-8 max-w-sm", dark ? "text-inverted" : "text-default")}>
+          <p className={classNames("mt-5 mb-8 max-w-sm", dark ? "text-inverted" : "text-default")}>
             {t(description)}
           </p>
           {buttons}
